@@ -17,7 +17,7 @@
 <hr>
 
 <% @portofolio_items.each do |item| %>
-  <p><%= item.title %></p>
+  <p><%= link_to item.title, portofolio_path(item.id) %></p>
   <p><%= item.subtitle %></p>
   <p><%= item.body %></p>
   <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
