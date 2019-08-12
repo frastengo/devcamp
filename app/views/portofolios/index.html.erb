@@ -2,9 +2,25 @@
 
 <hr>
 
+<!-- <a href="portofolios/new">Create New Item</a> -->
+
+<%= link_to "Create New Item", new_portofolio_path %>
+
+<!-- <p> this is the path
+  <%= new_portofolio_path %>
+</p> -->
+
+<!-- <p> this is the url
+  <%= new_portofolio_url %>
+</p> -->
+
+<hr>
+
 <% @portofolio_items.each do |item| %>
   <p><%= item.title %></p>
   <p><%= item.subtitle %></p>
   <p><%= item.body %></p>
   <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
+  <%= link_to "Edit", edit_portofolio_path(item.id) %>
+  <a href="/portofolios/<%= item.id %>/edit">Edit Two </a>
 <% end %>
