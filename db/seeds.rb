@@ -5,11 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
+
+puts "3 topics created"
+
 
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
-    body: "t enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?!"
+    body: "t enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?!",
+    topic_id: Topic.last.id
   )
 end
 
@@ -24,10 +33,20 @@ end
 
 puts "5 skills posts created"
 
-9.times do |portofolio|
+8.times do |portofolio|
   Portofolio.create!(
     title: "Portofolio Title #{portofolio}",
-    subtitle: "My great service",
+    subtitle: "Ruby on Rails",
+    body: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+    main_image: "https://via.placeholder.com/600x400",
+    thumb_image: "https://via.placeholder.com/350x200"
+  )
+end
+
+1.times do |portofolio|
+  Portofolio.create!(
+    title: "Portofolio Title #{portofolio}",
+    subtitle: "Angular",
     body: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
     main_image: "https://via.placeholder.com/600x400",
     thumb_image: "https://via.placeholder.com/350x200"

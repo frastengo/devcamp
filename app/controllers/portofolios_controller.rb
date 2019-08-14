@@ -3,8 +3,11 @@ class PortofoliosController < ApplicationController
     @portofolio_items = Portofolio.all
   end
 
+  def angular
+    @angular_portofolio_items = Portofolio.angular
+  end
+
   def new
-    @portofolio_item = Portofolio.new
   end
 
   def create
@@ -47,7 +50,7 @@ class PortofoliosController < ApplicationController
     #redirect!
     respond_to do |format|
       format.html { redirect_to portofolios_url, notice: "Portfolio was removed."}
-    end 
+    end
 
   end
 
