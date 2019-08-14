@@ -8,6 +8,7 @@ class PortofoliosController < ApplicationController
   end
 
   def new
+    @portofolio_item = Portofolio.new
   end
 
   def create
