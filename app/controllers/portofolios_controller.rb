@@ -3,12 +3,18 @@ class PortofoliosController < ApplicationController
     @portofolio_items = Portofolio.all
   end
 
+  def angular
+    @angular_portofolio_items = Portofolio.angular
+  end
+
   def new
     @portofolio_item = Portofolio.new
+    # 3 versions of portofolio item with technologies, create three types of the technologies and make it available for the form
+    3.times { @portofolio_item.technologies.build }
   end
 
   def create
-    @portofolio_item = Portofolio.new(params.require(:portofolio).permit(:title, :subtitle, :body))
+    @portofolio_item = Portofolio.new(params.require(:portofolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portofolio_item.save
@@ -47,7 +53,7 @@ class PortofoliosController < ApplicationController
     #redirect!
     respond_to do |format|
       format.html { redirect_to portofolios_url, notice: "Portfolio was removed."}
-    end 
+    end
 
   end
 
