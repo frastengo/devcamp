@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :portofolios, except: [:show]
 
   get 'angular-items', to: 'portofolios#angular'
