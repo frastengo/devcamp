@@ -8,6 +8,18 @@
 
 <h2>Technologies Used:</h2>
 
- <% @portofolio_item.technologies.each do |t| %>
-  <p><%= t.name %></p>
- <% end %>
+<% @portofolio_item.technologies.each do |t| %>
+<p><%= t.name %></p>
+<% end %>
+
+<hr>
+
+<%= params.inspect %>
+
+<%= params[:id] %>
+
+<%= Portofolio.find(params[:id]).title %>
+
+<hr>
+
+<%= session.inspect %>

@@ -14,7 +14,7 @@ class PortofoliosController < ApplicationController
   end
 
   def create
-    @portofolio_item = Portofolio.new(params.require(:portofolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
+    @portofolio_item = Portofolio.new(portofolio_params)
 
     respond_to do |format|
       if @portofolio_item.save
@@ -32,7 +32,7 @@ class PortofoliosController < ApplicationController
   def update
     @portofolio_item = Portofolio.find(params[:id])
     respond_to do |format|
-      if @portofolio_item.update(params.require(:portofolio).permit(:title, :subtitle, :body))
+      if @portofolio_item.update(portofolio_params)
         format.html { redirect_to portofolios_path, notice: "The record successfully updated"}
       else
         format.html { render :edit}
@@ -57,4 +57,12 @@ class PortofoliosController < ApplicationController
 
   end
 
+  private
+
+  def portofolio_params
+    params.require(:portofolio).permit(:title,
+                                       :subtitle,
+                                       :body,
+                                       technologies_attributes: [:name])
+  end
 end
