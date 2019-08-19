@@ -6,22 +6,6 @@
 
 <%= link_to "Create New Item", new_portofolio_path %>
 
-<!-- <p> this is the path
-  <%= new_portofolio_path %>
-</p> -->
-
-<!-- <p> this is the url
-  <%= new_portofolio_url %>
-</p> -->
-
 <hr>
 
-<% @portofolio_items.each do |item| %>
-  <p><%= link_to item.title, portofolio_show_path(item.id) %></p>
-  <p><%= item.subtitle %></p>
-  <p><%= item.body %></p>
-  <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
-  <%= link_to "Edit", edit_portofolio_path(item.id) %>
-  <%= link_to "Delete Portofolio Item", portofolio_path(item.id), method: :delete, data: { confirm: "Are you sure?" } %>
-  <a href="/portofolios/<%= item.id %>/edit">Edit Two </a>
-<% end %>
+<%= render @portofolio_items %>

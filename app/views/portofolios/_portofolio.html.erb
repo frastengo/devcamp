@@ -1,0 +1,11 @@
+<p><%= link_to portofolio.title, portofolio_show_path(portofolio.id) %></p>
+
+<p><%= portofolio.subtitle %></p>
+
+<p><%= portofolio.body %></p>
+
+<%= image_tag portofolio.thumb_image unless portofolio.thumb_image.nil? %>
+
+<%= link_to "Edit", edit_portofolio_path(portofolio.id) %>
+
+<%= link_to "Delete Portofolio Item", portofolio_path(portofolio.id), method: :delete, data: { confirm: "Are you sure?" } %>
