@@ -70,3 +70,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'devcamp_view_tool_fa', git: 'https://github.com/frastengo/devcamp_view_tool_fa'

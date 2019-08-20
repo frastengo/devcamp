@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/frastengo/devcamp_view_tool_fa
+  revision: 66c64112a643016db306068304975a2c309b169a
+  specs:
+    devcamp_view_tool_fa (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -238,6 +244,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  devcamp_view_tool_fa!
   devise (~> 4.6, >= 4.6.2)
   friendly_id (~> 5.2.4)
   jbuilder (~> 2.5)

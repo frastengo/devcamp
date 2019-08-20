@@ -19,6 +19,11 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+
+
+  def copyright_generator
+    DevcampViewToolFa::Renderer.copyright 'Francisca Astengo', 'All rights reserved'
+  end
 end
 
 def sample_method
