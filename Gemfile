@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 
 gem 'pry-byebug'
+
+gem 'bootstrap', '~> 4.0.0'
+
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
