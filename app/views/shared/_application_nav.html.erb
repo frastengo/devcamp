@@ -3,11 +3,12 @@
     <h3 class="masthead-brand">Francisca Astengo</h3>
     <nav class="nav nav-masthead">
 
-      <%= link_to "Home", root_path, class: "nav-link active"%>
-      <%= link_to "About", about_path, class: "nav-link" %>
-      <%= link_to "Contact", contact_path, class: "nav-link" %>
-      <%= link_to "Blogs", blogs_path, class: "nav-link" %>
-      <%= link_to "Portofolios", portofolios_path, class: "nav-link" %>
+      <%= nav_link_to("Home", root_path) %>
+      <%= nav_link_to("About", about_path) %>
+      <%= nav_link_to("Contact", contact_path) %>
+      <%= nav_link_to("Blogs", blogs_path) %>
+      <%= nav_link_to("Portofolios", portofolios_path) %>
+    
 
       <%= login_helper 'nav-link' %>
 

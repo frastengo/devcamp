@@ -13,6 +13,12 @@ module ApplicationHelper
     content_tag(:div, "My Content", class: "mine")
   end
 
+  def nav_link_to(title, path)
+    link_to title, path, class: "nav-link #{'active' if current_page? path}"
+  end
+
+
+
   def source_helper(layout_name)
     if session[:source]
       greeting = "Thanks for visiting me from #{session[:source]} and you are on #{layout_name} layout"
