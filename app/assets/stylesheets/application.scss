@@ -60,6 +60,10 @@ body {
   padding: 2rem;
 }
 
+.row{
+  margin: 0px;
+}
+
 
 /*
  * Header
@@ -165,5 +169,10 @@ body {
 */
 
 .card-block {
+  color: black;
+  text-align: left;
+}
+
+.auth-links a{
   color: black;
 }
