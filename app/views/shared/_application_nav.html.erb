@@ -1,13 +1,10 @@
 <div class="masthead clearfix">
   <div class="inner">
     <h3 class="masthead-brand">Francisca Astengo</h3>
-    <nav class="nav nav-masthead">
+    <nav class="nav nav-masthead app-nav">
 
-      <%= nav_link_to("Home", root_path) %>
-      <%= nav_link_to("About", about_path) %>
-      <%= nav_link_to("Contact", contact_path) %>
-      <%= nav_link_to("Blogs", blogs_path) %>
-      <%= nav_link_to("Portofolios", portofolios_path) %>
+      <%# <%= nav_link_to("Home", root_path) %> 
+      <%= nav_helper 'nav-link', "span" %>
     
 
       <%= login_helper 'nav-link' %>
