@@ -6,26 +6,15 @@
     <title> <%= @page_title %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-
     <meta name="keywords" content= "<%= @seo_keywords %>" />
-
     <%= stylesheet_link_tag    'portofolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-
-
     <%= render 'shared/portofolio_nav' %>
 
     <%# start of masthead  %>
-
-  <%= render 'shared/portofolio_masthead'%>
-
-    
-
-    
+  <%= render 'shared/portofolio_masthead' unless logged_in?(:site_admin) %>
 
     <%= yield %>
 
