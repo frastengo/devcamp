@@ -1,11 +1,14 @@
-<p><%= link_to portofolio.title, portofolio_show_path(portofolio.id) %></p>
+<div class="card">
+    <%= image_tag portofolio.thumb_image unless portofolio.thumb_image.nil? %>
 
-<p><%= portofolio.subtitle %></p>
+    <p class="card-text">
+        <span><%= link_to portofolio.title, portofolio_show_path(portofolio.id) %></span>
+        <%= portofolio.subtitle %>
+    </p>
+</div>
 
-<p><%= portofolio.body %></p>
 
-<%= image_tag portofolio.thumb_image unless portofolio.thumb_image.nil? %>
-
+<%# 
 <%= link_to "Edit", edit_portofolio_path(portofolio.id) %>
 
-<%= link_to "Delete Portofolio Item", portofolio_path(portofolio.id), method: :delete, data: { confirm: "Are you sure?" } %>
+<%# <%= link_to "Delete Portofolio Item", portofolio_path(portofolio.id), method: :delete, data: { confirm: "Are you sure?" } %> 
