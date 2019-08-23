@@ -19,8 +19,18 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <div id='background'>
-          </div>
+          <%# <div id='backgr'ound'>
+          </div> %>
+
+          <%= video_tag(
+            'seal.mp4', 
+            id: 'background',
+            autoplay: true,
+            loop: false,
+            muted: true,
+            poster: 'puppy.jpg'
+            )
+          %>
 
           <!-- <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p> -->
