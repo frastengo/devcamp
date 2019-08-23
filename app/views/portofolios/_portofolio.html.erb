@@ -1,6 +1,5 @@
-<div class="card">
+<div class="card" data-id=" <%= portofolio.id %> ">
     <%= image_tag portofolio.thumb_image unless portofolio.thumb_image.nil? %>
-
     <p class="card-text">
         <span><%= link_to portofolio.title, portofolio_show_path(portofolio.id) %></span>
         <%= portofolio.subtitle %>
