@@ -38,6 +38,18 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
+
+gem 'carrierwave'
+
+gem 'mini_magick', '~> 4.9', '>= 4.9.5'
+
+gem 'carrierwave-aws', '~> 1.3'
+
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
+
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -80,3 +92,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'petergate', '~> 2.0', '>= 2.0.1'
 
 gem 'devcamp_view_tool_fa', git: 'https://github.com/frastengo/devcamp_view_tool_fa'
+
+
+
