@@ -1,2 +1,9 @@
-h1 Pages#about
-p Find me in app/views/pages/about.html.slim
+h1 About
+hr
+.row
+    .col-md-4
+        / img src="https://snworksceo.imgix.net/dtc/10ec0a64-8f9d-46d9-acee-5ef9094d229d.sized-1000x1000.jpg?w=1000" width='350' height='auto' alt='profile-image'
+        = image_tag "https://snworksceo.imgix.net/dtc/10ec0a64-8f9d-46d9-acee-5ef9094d229d.sized-1000x1000.jpg?w=1000", width: 450, alt: 'profile-image'
+    .col-md-8
+        p This is the about me paragraph
+        = image_tag "puppy.jpg", width: 450
