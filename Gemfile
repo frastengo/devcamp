@@ -49,6 +49,10 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 
 
+##nested forms handling using jquery
+gem 'cocoon', '~> 1.2', '>= 1.2.14'
+
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
