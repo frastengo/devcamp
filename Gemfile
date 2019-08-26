@@ -39,7 +39,6 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
-
 gem 'carrierwave'
 
 gem 'mini_magick', '~> 4.9', '>= 4.9.5'
@@ -52,6 +51,9 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 ##nested forms handling using jquery
 gem 'cocoon', '~> 1.2', '>= 1.2.14'
 
+# This Ruby on Rails gem allows you to easily add Growl-like notifications to your application using a jQuery plugin called 'gritter'.
+
+gem 'gritter', '~> 1.2'
 
 
 # Use Redis adapter to run Action Cable in production
