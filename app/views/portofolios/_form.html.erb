@@ -2,12 +2,9 @@
 
    <% if portofolio_item.errors.any? %>
       <% portofolio_item.errors.full_messages.each do |error| %>
-        <%= js add_gritter(error, title: "Please pay attention!", sticky: false, time: 2000) %>
+        <%= alert_generator error %>
       <% end %>
   <% end %>
-
-
-
 
   <div class="row">
     <div class='col-sm-6'>
@@ -37,9 +34,6 @@
         <%= f.label :body %>
         <%= f.text_area :body , class: 'form-control', rows: "13"%>
       </div>
-
-    
-
     </div>
   </div>
   <hr>
