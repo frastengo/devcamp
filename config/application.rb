@@ -13,6 +13,7 @@ module Devcamp
     # config.load_defaults 5.2
     ## will override defaults
     config.action_controller.permit_all_parameters = true
+    config.eager_load_paths << "#{Rails.root}/lib"
     
 
     # Settings in config/environments/* take precedence over those specified here.

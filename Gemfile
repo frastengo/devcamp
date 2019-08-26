@@ -55,6 +55,10 @@ gem 'cocoon', '~> 1.2', '>= 1.2.14'
 
 gem 'gritter', '~> 1.2'
 
+gem 'twitter', '~> 6.2'
+
+gem 'redis', '~> 4.1', '>= 4.1.2'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
