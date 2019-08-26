@@ -16,6 +16,12 @@
             <p><%= t.name %></p>
             <% end %>
 
+            <% if logged_in?(:site_admin) %>
+                <div >
+                    <%= link_to 'Edit Item', edit_portofolio_path(@portofolio_item), class: 'btn btn-warning btn-block'%>
+                </div>
+            <% end %>
+
             
 
         </div>

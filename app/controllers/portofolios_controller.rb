@@ -24,7 +24,7 @@ class PortofoliosController < ApplicationController
   def new
     @portofolio_item = Portofolio.new
     # 3 versions of portofolio item with technologies, create three types of the technologies and make it available for the form
-    3.times { @portofolio_item.technologies.build }
+    1.times { @portofolio_item.technologies.build }
   end
 
   def create
@@ -77,7 +77,7 @@ class PortofoliosController < ApplicationController
                                        :body,
                                        :main_image,
                                        :thumb_image,
-                                       technologies_attributes: [:name]
+                                       technologies_attributes: [:id, :name, :_destroy]
                                        
                                       )
   end
