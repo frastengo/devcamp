@@ -20,4 +20,5 @@
 //= require gritter
 //= require activestorage
 //= require turbolinks
+//= require cable
 //= require_tree .
