@@ -2,10 +2,11 @@ class Portofolio < ApplicationRecord
   has_many :technologies
   accepts_nested_attributes_for :technologies, reject_if: lambda { |attrs| attrs['name'].blank? }
 
-  after_initialize :set_defaults
+  # after_initialize :set_defaults
 
-  include Placeholder
-  validates_presence_of :title, :body, :main_image, :thumb_image
+  # include Placeholder
+  # validates_presence_of :title, :body, :main_image, :thumb_image
+  validates_presence_of :title, :body
 
   mount_uploader :thumb_image, PortofolioUploader
   mount_uploader :main_image, PortofolioUploader
@@ -20,10 +21,10 @@ class Portofolio < ApplicationRecord
 
   scope :ruby_on_rails_portofolio_items, -> { where(subtitle: "Ruby on Rails") }
 
-  def set_defaults
-    self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
-    self.thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
-  end
+  # def set_defaults
+  #   self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
+  #   self.thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
+  # end
 end
 
 
