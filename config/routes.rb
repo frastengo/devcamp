@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'portofolio/:id', to: 'portofolios#show', as: 'portofolio_show'
 
   get '/about', to: 'pages#about'
+  
   get '/contact', to: 'pages#contact'
 
   resources :blogs do
@@ -18,6 +19,8 @@ Rails.application.routes.draw do
       get :toggle_status
     end
   end
+
+  mount ActionCable.server => '/cable'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
 end
