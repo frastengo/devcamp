@@ -15,6 +15,8 @@ class User < ApplicationRecord
 
   validates_presence_of :name
 
+  has_many :comments
+
   def first_name
     begin
     self.name.split.first
