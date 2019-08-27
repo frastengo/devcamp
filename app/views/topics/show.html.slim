@@ -1,0 +1,9 @@
+.col-sm-8.blog-main
+
+    h1 
+        = @topic.title
+    div
+        = paginate @blogs
+        = render @blogs
+        = paginate @blogs
+
