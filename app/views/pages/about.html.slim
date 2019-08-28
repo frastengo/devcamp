@@ -2,6 +2,7 @@
     .card
 
         h1 About
+
         hr
         .row
             .col-md-4
@@ -10,4 +11,27 @@
                 = image_tag "https://snworksceo.imgix.net/dtc/10ec0a64-8f9d-46d9-acee-5ef9094d229d.sized-1000x1000.jpg?w=1000", width: 250, alt: 'profile-image', class: 'profile-img'
             .col-md-8
                 p This is the about me paragraph
+                p About me paragraph should be longer than this but this is just an example!
                 / = image_tag "puppy.jpg", width: 450
+                p
+                    button.btn.btn-primary type="button" data-toggle="collapse" data-target="#jobHistory" aria-expanded="false" aria-controler="jobHistory"
+                        | Job History
+                    button.btn.btn-primary type="button" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controler="jobHistory"
+                        | Education
+                p
+                    #jobHistory.collapse
+                        .card.card-block
+                            | Job 1
+                        .card.card-block
+                            | Job 1
+                        .card.card-block
+                            | Job 3
+                    #education.collapse
+                        .card.card-block
+                            | Education 1
+                        .card.card-block
+                            | Education 1
+                        .card.card-block
+                            | Education 3
+
+

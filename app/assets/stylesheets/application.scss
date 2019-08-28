@@ -231,6 +231,7 @@ body {
 
 .app-card-container > .card{
   padding: 40px;
+  opacity: 0.8;
 }
 
 .profile-img{
@@ -240,4 +241,9 @@ body {
 
 .app-card-container a {
   color: grey;
+}
+
+.card-block{
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
