@@ -60,6 +60,13 @@ gem 'twitter', '~> 6.2'
 gem 'redis', '~> 4.1', '>= 4.1.2'
 
 
+## these are for markdowns!
+gem 'redcarpet', '~> 3.5'
+
+gem 'coderay', '~> 1.1', '>= 1.1.2'
+
+
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
